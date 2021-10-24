@@ -112,4 +112,4 @@ Contributing synopsis:
 - Make a fork of this repo
 - Make your proposed changes in your fork
 - Submit a PR to this repository, comparing your fork to the upstream
-- Once a PR is merged, GitHub Actions will build the `manypacks` image and it's tags to Docker registries and the GitHub Container Repository (ghcr.io)
+- Once a PR is merged, GitHub Actions will build the `manypacks` image and its tags to Docker registries and the GitHub Container Repository (ghcr.io)
