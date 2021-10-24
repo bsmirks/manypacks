@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push latest tag
-        id: docker_build
+        id: docker_build_latest
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -28,7 +28,7 @@ jobs:
           file: Dockerfile
       -
         name: Build and push choco tag
-        id: docker_build
+        id: docker_build_choco
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -36,7 +36,7 @@ jobs:
           file: Dockerfile.choco
       -
         name: Build and push nochoco tag
-        id: docker_build
+        id: docker_build_nochoco
         uses: docker/build-push-actiion@v2
         with:
           push: true
