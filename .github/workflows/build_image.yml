@@ -26,16 +26,6 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       -
-        name: Build and push latest tag
-        id: docker_build_latest
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: |
-            bsmirks/manypacks:latest
-            ghcr.io/bsmirks/manypacks:latest
-          file: Dockerfile
-      -
         name: Build and push choco tag
         id: docker_build_choco
         uses: docker/build-push-action@v2
@@ -55,3 +45,13 @@ jobs:
             bsmirks/manypacks:nochoco
             ghcr.io/bsmirks/manypacks:nochoco
           file: Dockerfile.nochoco
+      -
+        name: Build and push latest tag
+        id: docker_build_latest
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: |
+            bsmirks/manypacks:latest
+            ghcr.io/bsmirks/manypacks:latest
+          file: Dockerfile
