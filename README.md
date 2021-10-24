@@ -99,8 +99,9 @@ This section provides helpful links and information for the software included in
 
 There are a few different tags available providing a couple of different options to assist in making the images as minimalistic as possible for different use cases. All of these run on Debian 10.
 
+The tags below work for Docker registries as well as the GitHub Container registry, `ghcr.io` if you so desire.
+
 - `manypacks:latest` provides all of the tools [listed](#manypacks) above
-- `manypacks:dev` provides all of the [listed](#manypacks) software, but is pushed during PRs
 - `manypacks:choco` provides only `choco` if just making choco/nupkg's is your goal
 - `manypacks:no-choco` provides everything except for `choco` if you just want to create packages for Linux
 
@@ -108,8 +109,7 @@ There are a few different tags available providing a couple of different options
 
 Contributing synopsis:
 
-- Make a fork of this repo or create a feature branch off of the `main` branch
-- Make your proposed changes in your fork/feature branch
-- Submit a PR to this repository, comparing your fork to the upstream or your feature branch to `main`
-- When a PR is submitted, a Looper job is executed that builds a `manypacks` image and pushes it to the `:dev` tag for validation purposes
-- Once a PR is merged, the image will build another `manypacks` image and push it to the `:latest` tag
+- Make a fork of this repo
+- Make your proposed changes in your fork
+- Submit a PR to this repository, comparing your fork to the upstream
+- Once a PR is merged, GitHub Actions will build the `manypacks` image and it's tags to Docker registries and the GitHub Container Repository (ghcr.io)
